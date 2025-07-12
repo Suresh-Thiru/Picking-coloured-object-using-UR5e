@@ -3,41 +3,35 @@ Picking the coloured object on the work table using robotiq camera and OpenCV
 
 “See It, Pick It!” 🔍🤖
 
-Another Weekend Wrap: just for fun (and a bit of a challenge) I dove into vision-based robotic picking using our UR5e and the Robotiq wrist camera.
+Another Weekend Wrap: just for learning. I dove into vision-based robotic pick and place using UR5e and the Robotiq wrist camera.
 
 Over the weekend, I put together a quick demo that:
 
-📸 Captures an image from the Robotiq wrist camera via URCap
-
-🎨 Uses OpenCV in Python to detect object color
-
-🗣️ Leverages Google Speech API to issue voice commands (“Pick the red one”, “Pick the blue one”, etc.)
-
-🤖 Sends pick/place commands back to the UR5e
+📸 Captures an image from the Robotiq wrist camera without UR Cap.
+🎨 Uses OpenCV in Python to detect object color.
+🗣️ Leverages Google Speech API to issue voice commands to pick a color (“Red,” “Yellow,” or “Green”).
+🤖 Sends pick/place commands back to the UR5e.
 
 Main challenge:
-Getting a live video feed through the URCap interface proved trickier than expected. I worked around it by grabbing single-frame snapshots, then converting the detected pixel location into real-world coordinates for the robot to act on.
+Working with the Robotiq wrist camera with UR Cap is a bit easy, as it guides the process of pick and place, but I had other ideas. 
 
-Tech stack:
+I worked to connect with the camera and grab a single-frame snapshot, then convert the detected pixel location of the colored object using OpenCV into real-world coordinates for the robot to act on.
 
+While these implementations demonstrate foundational-level control of the UR5e, they serve as a critical stepping stone toward advanced AI-driven machine vision and machine learning applications. Think real-time convolutional neural network⁠-based object recognition, sensor fusion, and reinforcement learning for adaptive grasping.
+
+🛠️ Tech stack:
 Python + OpenCV (no GUI)
-
 Google Speech API for voice control
-
-Robotiq Wrist Camera with URCap
-
+Robotiq Wrist Camera
 Universal Robots UR5e
 
-What’s next?
+💡 What could be improved or taken further:
 
-Stream live video via a custom URCap plugin
+1. Integrate an AI-based vision model (e.g., TensorFlow or PyTorch) for more robust object detection.
+2. Add a ROS bridge for multi-modal control (gesture + voice + vision).
 
-Refine pixel-to-coordinate mapping with camera calibration
+Diving deep into OpenCV and voice-guided manipulation is all about preparing for tomorrow’s vehicle-centric smart manufacturing and skills to tackle vision challenges in self-driving cars.
 
-Integrate an AI-based vision model (e.g., TensorFlow or PyTorch) for more robust object detection
+Youtube link: https://youtu.be/X-wuH-tP2zE
 
-Add a ROS bridge for multi-modal control (gesture + voice + vision)
-
-🔗 Check out the project video here for a quick demo!
-
-#UR5e #Robotics #ComputerVision #OpenCV #VoiceControl #Python #Automation #WeekendBuild #IndustrialRobotics #HumanRobotInteraction #Robotiq #UniversalRobots #JustForFun
+hashtag#UR5e hashtag#Robotics hashtag#ComputerVision hashtag#OpenCV hashtag#VoiceControl hashtag#Python hashtag#Automation hashtag#WeekendBuild hashtag#IndustrialRobotics hashtag#HumanRobotInteraction hashtag#Robotiq hashtag#UniversalRobots hashtag#JustForFun hashtag#Robotiqwristcamera hashtag#Autonomousdriving hashtag#AstonUniversity hashtag#ADAS
